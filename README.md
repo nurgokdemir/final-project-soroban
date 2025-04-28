@@ -1,52 +1,52 @@
 # Soroban Token Contract
 
-This project is a standard token contract developed on the Soroban platform. Soroban is a smart contract platform that runs on the Stellar blockchain.
+This repository contains a standard token smart contract built specifically for the Soroban platform, which is Stellar's smart contract layer.
 
-## Project Overview
+## About the Project
 
-Soroban Token Contract is a comprehensive smart contract offering basic token functionalities. With this contract, you can perform standard token operations such as creating, transferring, burning tokens, and authorizing third-party spending.
+The Soroban Token Contract provides a full set of basic token operations. It enables functionalities like minting, transferring, burning tokens, and managing third-party token allowances through a secure and efficient design.
 
-## Features
+## Key Features
 
-- **Token Management**: Mint, burn, and transfer operations
-- **Authorization**: Allowance mechanism for third-party spending
-- **Admin Control**: Setting admin and operations requiring administrator permission
-- **Metadata**: Token name, symbol, and decimal information
+- **Token Lifecycle Management**: Mint new tokens, burn existing ones, and transfer between accounts
+- **Delegated Spending**: Implement an approval system allowing others to spend tokens on your behalf
+- **Administrative Controls**: Define an admin account and enforce admin-only operations
+- **Token Metadata**: Store information like token name, symbol, and decimal precision
 
-## Contract Structure
+## Architecture
 
-The project consists of the following modules:
+The contract is modular and consists of:
 
-- **admin**: Administrator functions and authorization
-- **allowance**: Token spending permission management
-- **balance**: Balance management operations
-- **contract**: Main contract implementation and token interface
-- **metadata**: Token metadata (name, symbol, decimals)
-- **storage_types**: Storage data structures
+- **admin**: Functions for admin role management and permission enforcement
+- **allowance**: Logic for managing spending permissions
+- **balance**: Core balance tracking and updates
+- **contract**: Main contract logic and standard token interface
+- **metadata**: Token attributes such as name, symbol, and decimals
+- **storage_types**: Definitions for structured data storage
 
-## Technical Details
+## Technical Overview
 
-The contract is written in Rust programming language and compiled without standard library dependencies using the `#![no_std]` directive. This approach ensures that the contract is smaller in size and operates more efficiently.
+This smart contract is developed in Rust and uses the `#![no_std]` directive to operate without the Rust standard library. This allows the contract to be lightweight and optimized for blockchain environments.
 
-### Key Functions
+### Major Functions
 
-#### Token Management
-- `mint`: Create new tokens (admin only)
-- `burn`: Burn tokens
-- `transfer`: Transfer tokens
-- `balance`: View address balance
+#### Token Operations
+- `mint`: Admin-exclusive function to issue new tokens
+- `burn`: Destroy a specified number of tokens
+- `transfer`: Move tokens from one account to another
+- `balance`: Retrieve the current token balance of an address
 
-#### Allowance Management
-- `approve`: Grant spending permission to another address
-- `allowance`: View granted permission amount
-- `transfer_from`: Transfer tokens with permission
-- `burn_from`: Burn tokens with permission
+#### Allowance Operations
+- `approve`: Grant spending rights to another address
+- `allowance`: Check the approved spending limit
+- `transfer_from`: Move tokens on behalf of the owner using granted rights
+- `burn_from`: Burn tokens using delegated allowance
 
-#### Admin Operations
-- `initialize`: Initialize the contract
-- `set_admin`: Change the administrator address
+#### Admin-Specific Functions
+- `initialize`: Set up the contract initially
+- `set_admin`: Assign a new administrator
 
-## Contact
+## Getting Involved
 
 For questions or contributions, please open an issue or submit a pull request.
 
