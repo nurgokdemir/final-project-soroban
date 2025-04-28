@@ -49,3 +49,12 @@ The contract is written in Rust programming language and compiled without standa
 ## Contact
 
 For questions or contributions, please open an issue or submit a pull request.
+
+## 1. Doğrudan Markdown Sözdizimi ile:
+![Resim Açıklaması](./images/resim.png)
+
+## 2. HTML Sözdizimi ile (Boyut kontrolü için):
+<img src="./images/resim.png" width="300" height="200" alt="Resim Açıklaması"/>
+
+## 3. Online Resim için:
+![Resim Açıklaması](https://website.com/resim.png)
